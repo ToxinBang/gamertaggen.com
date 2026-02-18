@@ -107,10 +107,17 @@
         }
 
         .ad-placeholder {
-            color: var(--text-muted);
+            color: var(--accent-cyan-dark);
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.875rem;
-            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: pulseText 2s infinite;
+        }
+
+        @keyframes pulseText {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
         }
 
         /* Header */
@@ -537,7 +544,7 @@
     <div class="container">
         <!-- Top Ad Space -->
         <div id="ad-container-top" class="ad-space ad-top">
-            <span class="ad-placeholder">Ad Space (Top Banner)</span>
+            <span class="ad-placeholder">NEURAL LINK // STANDBY</span>
         </div>
 
         <!-- Main Content -->
@@ -601,11 +608,35 @@
                 <div id="history-container" class="history-container">
                 </div>
             </section>
+
+            <!-- SEO Content Section -->
+            <section class="seo-content" style="max-width: 800px; margin: 4rem auto; padding: 0 1rem; color: var(--text-secondary); text-align: left;">
+                <h2 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 1rem;">How to Create a Sweaty Gamertag in 2026</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Looking for the perfect <strong>sweaty gamertag</strong> for Valorant, CS2, or Warzone? A pro-level name isn't just random letters; it's a psychological weapon. Our <em>Cyberpunk Gamertag Generator</em> uses algorithms modeled after top-tier esports players to create names that strike fear into your enemies.
+                </p>
+
+                <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Style Guide:</h3>
+                <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><strong style="color: var(--accent-pink);">✦ The Minimalist (2-4 letters):</strong> Short, punchy names like "Vex", "Jinx", or "Kade". These are rare and show dominance.</li>
+                    <li><strong style="color: var(--accent-pink);">✦ The Japanese Aesthetic:</strong> Adding kanji or katakana creates a mysterious "shadow" vibe (e.g., "Ghost 幽灵").</li>
+                    <li><strong style="color: var(--accent-pink);">✦ The 'Sweat' Prefix:</strong> Using classic tags like "Not", "Its", or "Real" before your name (e.g., "NotTenz", "ItsJohn").</li>
+                </ul>
+
+                <h3 style="color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.5rem;">Why use a Generator?</h3>
+                <p>
+                    Most "cool names" are already taken. Our engine checks millions of combinations to give you a unique identity. Whether you need a funny name for Roblox or a terrifying handle for Ranked Play, we've got you covered.
+                </p>
+
+                <div style="margin-top: 2rem; border-top: 1px solid var(--bg-secondary); padding-top: 1rem; font-size: 0.8rem; opacity: 0.7;">
+                    <p>Supported Games: Valorant • Call of Duty: Warzone • Counter-Strike 2 • Overwatch 2 • Fortnite • Apex Legends • Roblox</p>
+                </div>
+            </section>
         </main>
 
         <!-- Bottom Ad Space -->
         <div id="ad-container-bottom" class="ad-space ad-bottom">
-            <span class="ad-placeholder">Ad Space (Bottom Banner)</span>
+            <span class="ad-placeholder">SYSTEM STATUS // ONLINE</span>
         </div>
     </div>
 

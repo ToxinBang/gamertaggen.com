@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Gamertag Generator - Cool Names for FPS/RPG</title>
+    <meta name="description" content="Generate unique, sweaty, and aesthetic gaming names instantly. Best for COD, Valorant, Roblox, and Discord. Professional cyberpunk style namer.">
+
+    <meta property="og:title" content="Cyberpunk Gamertag Generator">
+    <meta property="og:description" content="Get a pro-level gaming name in seconds.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0c10;
+            --bg-secondary: #1f2833;
+            --bg-tertiary: #c5c6c7;
+            --accent-cyan: #66fcf1;
+            --accent-cyan-dark: #45a29e;
+            --accent-pink: #ff006e;
+            --accent-pink-dark: #c9184a;
+            --text-primary: #ffffff;
+            --text-secondary: #c5c6c7;
+            --text-muted: #666666;
+            --btn-bg: #1f2833;
+            --btn-bg-hover: #45a29e;
+            --btn-text: #ffffff;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --transition-fast: 150ms ease;
+            --transition-normal: 300ms ease;
+            --transition-slow: 500ms ease;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+            --glow-cyan: 0 0 20px rgba(102, 252, 241, 0.5);
+            --glow-pink: 0 0 20px rgba(255, 0, 110, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        /* Ad Space */
+        .ad-space {
+            width: 100%;
+            height: 100px;
+            background-color: var(--bg-secondary);
+            border: 2px dashed var(--accent-cyan-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .ad-top {
+            margin-top: 0;
+        }
+
+        .ad-bottom {
+            margin-bottom: 0;
+        }
+
+        .ad-placeholder {
+            color: var(--text-muted);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            animation: fadeInDown 600ms ease;
+        }
+
+        .title {
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 900;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-shadow: var(--glow-cyan);
+            margin-bottom: var(--spacing-sm);
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                text-shadow:
+                    0 0 5px var(--accent-cyan),
+                    0 0 10px var(--accent-cyan),
+                    0 0 20px var(--accent-cyan);
+            }
+            50% {
+                text-shadow:
+                    0 0 10px var(--accent-cyan),
+                    0 0 20px var(--accent-cyan),
+                    0 0 40px var(--accent-cyan),
+                    0 0 80px var(--accent-cyan);
+            }
+        }
+
+        .subtitle {
+            font-size: clamp(0.875rem, 2vw, 1.125rem);
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+        }
+
+        /* Controls */
+        .controls {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .control-group {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            display: block;
+            color: var(--accent-cyan);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: var(--spacing-md) var(--spacing-sm);
+            background-color: var(--bg-secondary);
+            border: 2px solid var(--accent-cyan-dark);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2366fcf1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right var(--spacing-md) center;
+            background-size: 1.25rem;
+        }
+
+        .dropdown:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: var(--glow-cyan);
+        }
+
+        .dropdown:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            box-shadow: var(--glow-pink);
+        }
+
+        .dropdown option {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: var(--spacing-sm);
+        }
+
+        /* Buttons */
+        .btn {
+            position: relative;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-generate {
+            width: 100%;
+            padding: var(--spacing-lg) var(--spacing-xl);
+            font-size: 1.125rem;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--accent-cyan-dark));
+            color: var(--text-primary);
+            border: 2px solid var(--accent-cyan);
+            box-shadow: var(--shadow-lg), var(--glow-cyan);
+        }
+
+        .btn-generate:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 40px var(--accent-cyan);
+        }
+
+        .btn-generate:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .btn-generate:hover:not(:disabled) .btn-text {
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .btn-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            pointer-events: none;
+            transition: all var(--transition-slow);
+        }
+
+        .btn-generate:hover:not(:disabled) .btn-glow {
+            width: 200%;
+            height: 200%;
+            opacity: 0.3;
+        }
+
+        .btn-copy {
+            background-color: var(--bg-secondary);
+            color: var(--accent-cyan);
+            border: 2px solid var(--accent-cyan-dark);
+        }
+
+        .btn-copy:hover:not(:disabled) {
+            background-color: var(--accent-cyan-dark);
+            color: var(--bg-primary);
+            box-shadow: var(--glow-cyan);
+        }
+
+        .btn-copy:disabled {
+            border-color: var(--text-muted);
+            color: var(--text-muted);
+        }
+
+        .copy-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: currentColor;
+        }
+
+        /* Display Section */
+        .display-section {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .display-container {
+            width: 100%;
+            background-color: var(--bg-secondary);
+            border: 3px solid var(--accent-cyan-dark);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-lg), var(--glow-cyan);
+            animation: fadeInUp 500ms ease;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gamertag-display {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 900;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .gamertag-display .placeholder-text {
+            color: var(--text-muted);
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 500;
+        }
+
+        .gamertag-display .generated-text {
+            animation: textReveal 400ms ease;
+        }
+
+        @keyframes textReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .character-count {
+            margin-top: var(--spacing-sm);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+        }
+
+        .character-count #current-length {
+            color: var(--accent-pink);
+            font-weight: 700;
+        }
+
+        .character-count.warning {
+            color: var(--accent-pink);
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Copy Feedback */
+        .copy-feedback {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent-cyan);
+            color: var(--bg-primary);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all var(--transition-normal);
+            z-index: 1000;
+        }
+
+        .copy-feedback.show {
+            opacity: 1;
+            transform: translateX(0);
+            animation: slideIn 300ms ease;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .copy-feedback.hide {
+            animation: slideOut 300ms ease forwards;
+        }
+
+        @keyframes slideOut {
+            0% { transform: translateX(0); opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+
+        /* History Section */
+        .history-section {
+            width: 100%;
+            max-width: 600px;
+            margin-top: var(--spacing-xl);
+        }
+
+        .history-title {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+
+        .history-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            justify-content: center;
+        }
+
+        .history-item {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--accent-cyan-dark);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .history-item:hover {
+            background-color: var(--accent-cyan-dark);
+            transform: scale(1.05);
+        }
+
+        /* Loading Animation */
+        @keyframes loading {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        .loading {
+            animation: loading 1.5s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .controls {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-lg);
+                max-width: 600px;
+            }
+
+            .control-group:nth-child(3) {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .container {
+                padding: var(--spacing-sm);
+            }
+
+            .main-content {
+                padding: var(--spacing-lg) var(--spacing-sm);
+            }
+
+            .ad-space {
+                height: 80px;
+            }
+        }
+
+        @media (hover: none) {
+            .btn:hover {
+                transform: none;
+            }
+
+            .dropdown:hover {
+                box-shadow: var(--shadow-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Ad Space -->
+        <div id="ad-container-top" class="ad-space ad-top">
+            <span class="ad-placeholder">Ad Space (Top Banner)</span>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1 class="title">Pro Gamertag Generator</h1>
+                <p class="subtitle">Create your perfect gaming identity</p>
+            </header>
+
+            <!-- Controls Section -->
+            <section class="controls">
+                <div class="control-group">
+                    <label for="category-select" class="label">Select Category</label>
+                    <select id="category-select" class="dropdown">
+                        <option value="fps">FPS / Competitive</option>
+                        <option value="rpg">RPG / Fantasy</option>
+                        <option value="funny">Funny / Meme</option>
+                        <option value="tryhard">Tryhard / Sweaty</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="mode-select" class="label">Generation Mode</label>
+                    <select id="mode-select" class="dropdown">
+                        <option value="hybrid">Hybrid (Prefix + Suffix)</option>
+                        <option value="prefix">Prefix Only</option>
+                        <option value="suffix">Suffix Only</option>
+                        <option value="random">Pure Random</option>
+                    </select>
+                </div>
+
+                <button id="generate-btn" class="btn btn-generate">
+                    <span class="btn-text">GENERATE GAMERTAG</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </section>
+
+            <!-- Display Section -->
+            <section class="display-section">
+                <div class="display-container">
+                    <div id="gamertag-display" class="gamertag-display">
+                        <span class="placeholder-text">Your gamertag will appear here</span>
+                    </div>
+                    <div class="character-count">
+                        <span id="current-length">0</span>/12
+                    </div>
+                </div>
+
+                <button id="copy-btn" class="btn btn-copy" disabled>
+                    <svg class="copy-icon" viewBox="0 0 24 24">
+                        <path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z"/>
+                    </svg>
+                    <span class="btn-text">COPY TO CLIPBOARD</span>
+                </button>
+            </section>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <h3 class="history-title">Recent Generated</h3>
+                <div id="history-container" class="history-container">
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Ad Space -->
+        <div id="ad-container-bottom" class="ad-space ad-bottom">
+            <span class="ad-placeholder">Ad Space (Bottom Banner)</span>
+        </div>
+    </div>
+
+    <!-- Copy Feedback -->
+    <div id="copy-feedback" class="copy-feedback">
+        <span class="feedback-text">Copied!</span>
+    </div>
+
+    <script>
+        // Gamertag Data - 50+ prefixes and suffixes per category
+        const gamertagData = {
+            fps: {
+                prefixes: [
+                    "Shadow", "Ghost", "Phantom", "Viper", "Wolf", "Sniper", "Reaper",
+                    "Demon", "Storm", "Blaze", "Frost", "Thunder", "Dragon", "Knight",
+                    "Rogue", "Hawk", "Falcon", "Eagle", "Panther", "Tiger", "Lion",
+                    "Bear", "Shark", "Cobra", "Python", "Venom", "Toxin", "Plague",
+                    "Death", "Doom", "Grim", "Dark", "Night", "Silent", "Stealth",
+                    "Tactical", "Combat", "Elite", "Master", "Lord", "King", "Queen",
+                    "Captain", "Major", "General", "Commander", "Chief", "Alpha",
+                    "Omega", "Prime", "Ultimate", "Supreme", "Mega", "Ultra", "Hyper",
+                    "Super", "Epic", "Legendary", "Mythic", "Divine", "Celestial",
+                    "Cosmic", "Infinite", "Eternal", "Immortal", "Ancient", "Forgotten",
+                    "Cyber", "Tech", "Neon", "Laser", "Plasma", "Quantum", "Atomic",
+                    "Nuclear", "Explosive", "Fatal", "Lethal", "Deadly", "Murder", "Xtreme",
+                    "Rapid", "Quick", "Flash", "Swift", "Swift", "Sharp", "Edge", "Blade",
+                    "Strike", "Blast", "Frag", "Kill", "Hunt", "Track", "Trace", "Scope"
+                ],
+                suffixes: [
+                    "X", "Pro", "God", "King", "Lord", "Master", "Elite", "Legend",
+                    "Myth", "Boss", "Chief", "Hero", "Star", "Champ", "Winner",
+                    "Victor", "Champion", "Slayer", "Destroyer", "Hunter", "Killer",
+                    "Reaper", "Terminator", "Annihilator", "Dominatr", "Conqueror",
+                    "Vanquish", "Crush", "Smash", "Strike", "Blast", "Burst", "Shots",
+                    "Head", "Snipe", "Aim", "Target", "Scope", "Zoom", "Focus", "Lock",
+                    "Fire", "Heat", "Burn", "Melt", "Freeze", "Chill", "Shock", "Bolt",
+                    "Spark", "Flash", "Bang", "Boom", "Pow", "Crack", "Snap", "Pop",
+                    "Xx", "xx", "X_", "_X", "007", "99", "777", "666", "420", "69",
+                    "1337", "360", "9000", "OP", "GG", "EZ", "Noob", "Pro", "God",
+                    "Gamer", "Player", "User", "Account", "Profile", "ID", "Tag",
+                    "Name", "Handle", "Alias", "Nickname", "Moniker", "Title", "Label",
+                    "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+                    "Nine", "Ten", "Eleven", "Twelve", "Zero", "Null", "Void", "None",
+                    "Mode", "Style", "Type", "Kind", "Sort", "Form", "Shape", "Way",
+                    "Shot", "Hit", "Tap", "Drop", "Frag", "Kill", "Aim", "Fire"
+                ]
+            },
+            rpg: {
+                prefixes: [
+                    "Arcane", "Mystic", "Elder", "Ancient", "Holy", "Divine", "Sacred",
+                    "Blessed", "Cursed", "Dark", "Light", "Shadow", "Storm", "Flame",
+                    "Frost", "Nature", "Wild", "Beast", "Dragon", "Demon", "Angel",
+                    "Spirit", "Soul", "Heart", "Mind", "Body", "Blood", "Bone", "Iron",
+                    "Steel", "Gold", "Silver", "Crystal", "Diamond", "Emerald", "Ruby",
+                    "Sapphire", "Onyx", "Jade", "Amethyst", "Pearl", "Ivory", "Ebony",
+                    "Obsidian", "Phoenix", "Griffin", "Unicorn", "Dragonborn", "Elven",
+                    "Dwarven", "Orcish", "Giant", "Titan", "Celestial", "Infernal",
+                    "Abyssal", "Void", "Ethereal", "Phantasmal", "Spectral", "Wraith",
+                    "Vampire", "Werewolf", "Lich", "Necro", "Paladin", "Ranger", "Mage",
+                    "Wizard", "Sorcerer", "Warlock", "Druid", "Cleric", "Monk", "Barbarian",
+                    "Knight", "Warrior", "Soldier", "Mercenary", "Assassin", "Rogue",
+                    "Thief", "Bandit", "Pirate", "Sailor", "Voyager", "Traveler", "Wanderer",
+                    "Seeker", "Hunter", "Explorer", "Discoverer", "Pioneer", "Pathfinder",
+                    "Guardian", "Keeper", "Warden", "Protector", "Defender", "Sentinel",
+                    "Watcher", "Observer", "Seer", "Oracle", "Prophet", "Visionary",
+                    "Mystic", "Oracle", "Prophet", "Sage", "Master", "Adept", "Novice",
+                    "Apprentice", "Journeyman", "Expert", "Veteran", "Legend", "Myth"
+                ],
+                suffixes: [
+                    "Born", "Heart", "Soul", "Spirit", "Mind", "Keeper", "Guardian",
+                    "Warden", "Lord", "King", "Queen", "Prince", "Princess", "Master",
+                    "Walker", "Seeker", "Finder", "Hunter", "Slayer", "Bane", "Blessing",
+                    "Curse", "Doom", "Fate", "Destiny", "Legacy", "Prophecy", "Omen",
+                    "Sign", "Mark", "Brand", "Seal", "Crest", "Emblem", "Banner", "Flag",
+                    "Shield", "Blade", "Sword", "Axe", "Hammer", "Bow", "Staff", "Wand",
+                    "Orb", "Crystal", "Gem", "Stone", "Rock", "Metal", "Wood", "Leaf",
+                    "Bloom", "Flower", "Rose", "Lily", "Thorn", "Vine", "Root", "Seed",
+                    "Spore", "Petal", "Bud", "Blossom", "Meadow", "Forest", "Grove", "Glen",
+                    "Valley", "Peak", "Mountain", "Hill", "Ridge", "Cliff", "Cave", "Dell",
+                    "Rune", "Glyph", "Symbol", "Sigil", "Mark", "Sign", "Token", "Emblem",
+                    "Wielder", "Bearer", "Carrier", "Holder", "Possessor", "Owner",
+                    "Caster", "Weaver", "Binder", "Summor", "Channeler", "Conduit",
+                    "Song", "Voice", "Word", "Whisper", "Chant", "Hymn", "Prayer", "Spell",
+                    "Magic", "Power", "Force", "Energy", "Essence", "Substance", "Form",
+                    "Shape", "Image", "Vision", "Dream", "Nightmare", "Fantasy", "Tale",
+                    "Story", "Legend", "Myth", "Fable", "Saga", "Epic", "Chronicle", "Lore"
+                ]
+            },
+            funny: {
+                prefixes: [
+                    "Noob", "Dont", "Please", "Stop", "Help", "SOS", "Lag", "AFK",
+                    "BRB", "GG", "EZ", "WTF", "OMG", "LOL", "LMAO", "ROFL", "KeK",
+                    "Pog", "Simp", "Chad", "Virgin", "Based", "Cringe", "Sus", "Red",
+                    "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "White",
+                    "Black", "Gray", "Brown", "Small", "Big", "Tiny", "Huge", "Fat",
+                    "Thin", "Fast", "Slow", "Weak", "Strong", "Smart", "Dumb", "Stupid",
+                    "Crazy", "Weird", "Normal", "Strange", "Odd", "Funny", "Silly", "Goofy",
+                    "Clown", "Joker", "Jester", "Meme", "Dank", "Spicy", "Salty", "Sweet",
+                    "Tasty", "Yummy", "Delicious", "Fresh", "Rotten", "Stinky", "Smelly",
+                    "Clean", "Dirty", "Messy", "Neat", "Tidy", "Organized", "Chaotic",
+                    "Happy", "Sad", "Angry", "Mad", "Calm", "Excited", "Bored", "Tired",
+                    "Awake", "Sleepy", "Hungry", "Full", "Thirsty", "Drunk", "High", "Sober",
+                    "Rich", "Poor", "Broke", "Cheap", "Expensive", "Free", "Paid", "Costly",
+                    "Hot", "Cold", "Warm", "Cool", "Freezing", "Boiling", "Burning", "Freezing",
+                    "Old", "Young", "New", "Ancient", "Modern", "Vintage", "Retro", "Classic",
+                    "Lazy", "Hyper", "Chill", "Loud", "Quiet", "Shy", "Bold", "Brave",
+                    "Scared", "Brave", "Hero", "Villain", "Good", "Bad", "Evil", "Nice"
+                ],
+                suffixes: [
+                    "Master", "Lord", "King", "God", "Pro", "Legend", "Hero", "Champ",
+                    "Star", "Boss", "Chief", "Captain", "General", "Major", "Colonel",
+                    "Commander", "Leader", "Ruler", "Monarch", "Emperor", "Empress",
+                    "Sultan", "Czar", "Kaiser", "Pharaoh", "Pope", "Priest", "Bishop",
+                    "Cardinal", "Saint", "Angel", "Demon", "Devil", "Ghost", "Spirit",
+                    "Wizard", "Mage", "Warlock", "Witch", "Necro", "Druid", "Shaman",
+                    "Ninja", "Samurai", "Knight", "Paladin", "Monk", "Barbarian", "Viking",
+                    "Pirate", "Cowboy", "Alien", "Robot", "Zombie", "Vampire", "Werewolf",
+                    "Chicken", "Duck", "Goose", "Turkey", "Fish", "Shrimp", "Crab", "Lobster",
+                    "Pig", "Cow", "Sheep", "Goat", "Horse", "Donkey", "Mule", "Camel",
+                    "Dog", "Cat", "Bird", "Snake", "Frog", "Toad", "Lizard", "Turtle",
+                    "Bunny", "Rabbit", "Hamster", "Gerbil", "Mouse", "Rat", "Squirrel",
+                    "Bear", "Panda", "Koala", "Kangaroo", "Monkey", "Ape", "Gorilla",
+                    "Whale", "Dolphin", "Shark", "Octopus", "Squid", "Jellyfish", "Seal",
+                    "Lion", "Tiger", "Elephant", "Rhino", "Hippo", "Zebra", "Giraffe",
+                    "Penguin", "Owl", "Eagle", "Hawk", "Falcon", "Parrot", "Peacock"
+                ]
+            },
+            tryhard: {
+                prefixes: [
+                    "xX", "ii", "zZ", "yY", "iTz", "MLG", "Pro", "God", "Elite", "Ez",
+                    "Quick", "Fast", "Snipe", "Head", "One", "Tap", "Drop", "Frag", "Kill",
+                    "Die", "Dead", "Destroy", "Annihilate", "Dominate", "Crush", "Smash",
+                    "Wreck", "Ru", "Rek", "Owned", "Pwned", "Carry", "Clutch", "Ace",
+                    "Win", "Victory", "Champion", "First", "Best", "Top", "High", "Max",
+                    "Op", "Imba", "Broken", "Meta", "Sweaty", "Sweat", "Grind", "Rush",
+                    "Push", "Rotate", "Hold", "Defend", "Attack", "Engage", "Disengage",
+                    "Peek", "Angle", "Position", "Spam", "Camp", "Hunt", "Track", "Trace",
+                    "Lock", "Aim", "Scope", "Zoom", "Crosshair", "Headshot", "Sniper",
+                    "Rusher", "Entry", "Support", "Anchor", "Lurker", "Fragger", "IGL",
+                    "Strat", "Tactic", "Setup", "Execute", "Trade", "Flash", "Smoke", "Molotov",
+                    "He", "Decoy", "Bait", "Rotate", "Hold", "Push", "Peak", "Defuse",
+                    "Plant", "Defuse", "Rescue", "Hostage", "Bomb", "Site", "Point", "Cap",
+                    "Flag", "Base", "Core", "Crystal", "Nexus", "Inhibitor", "Turret", "Tower",
+                    "Minion", "Creep", "Wave", "Farm", "Jungle", "Camp", "Gank", "Roam",
+                    "NoScope", "QuickScope", "360", "Headshot", "OneTap", "Drop", "Frag",
+                    "KillStreak", "MultiKill", "UltraKill", "Rampage", "Unstoppable", "Godlike"
+                ],
+                suffixes: [
+                    "Xx", "xX", "ii", "zZ", "yY", "YoLo", "Swag", "Hype", "Lit", "Fire",
+                    "Savage", "Fierce", "Wild", "Crazy", "Insane", "Mad", "Psycho", "Mental",
+                    "God", "Jesus", "Lord", "Master", "King", "Boss", "Chief", "Alpha",
+                    "Omega", "Prime", "Ultimate", "Supreme", "Infinite", "Eternal", "Forever",
+                    "Always", "Never", "Ever", "Only", "Just", "Pure", "True", "Real",
+                    "Legit", "Valid", "Confirmed", "Verified", "Certified", "Approved",
+                    "Official", "Pro", "Elite", "Veteran", "Expert", "Master", "Legend",
+                    "Mythic", "Divine", "Celestial", "Cosmic", "Galactic", "Universal",
+                    "Global", "World", "International", "National", "Regional", "Local",
+                    "Team", "Squad", "Clan", "Gang", "Crew", "Unit", "Force", "Army",
+                    "007", "360", "420", "666", "69", "777", "99", "1337", "9000", "9999",
+                    "NoScope", "QuickScope", "360NoScope", "HeadShot", "OneTap", "Drop",
+                    "Frag", "KillStreak", "MultiKill", "UltraKill", "Rampage", "Unstoppable",
+                    "Godlike", "Legendary", "Ace", "Clutch", "Carry", "Support", "Tank",
+                    "Healer", "DPS", "Tank", "Support", "Mage", "ADC", "Jungle", "Mid",
+                    "Top", "Bot", "Fill", "All", "Any", "Random", "RNG", "Luck", "Skill",
+                    "Ranked", "Casual", "Competitive", "Match", "Game", "Round", "Set", "Map"
+                ]
+            }
+        };
+
+        const randomChars = {
+            uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            lowercase: "abcdefghijklmnopqrstuvwxyz",
+            numbers: "0123456789",
+            special: "xXzZ_"
+        };
+
+        // Main Gamertag Generator Class
+        class GamertagGenerator {
+            constructor() {
+                this.maxNameLength = 12;
+                this.history = [];
+                this.maxHistorySize = 10;
+                this.currentGamertag = null;
+
+                this.initializeElements();
+                this.attachEventListeners();
+            }
+
+            initializeElements() {
+                this.categorySelect = document.getElementById('category-select');
+                this.modeSelect = document.getElementById('mode-select');
+                this.generateBtn = document.getElementById('generate-btn');
+                this.gamertagDisplay = document.getElementById('gamertag-display');
+                this.currentLengthSpan = document.getElementById('current-length');
+                this.copyBtn = document.getElementById('copy-btn');
+                this.copyFeedback = document.getElementById('copy-feedback');
+                this.historyContainer = document.getElementById('history-container');
+            }
+
+            attachEventListeners() {
+                this.generateBtn.addEventListener('click', () => this.generateGamertag());
+                this.copyBtn.addEventListener('click', () => this.copyToClipboard());
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.generateGamertag();
+                    }
+                    if (e.key === 'c' && (e.ctrlKey || e.metaKey) && this.currentGamertag) {
+                        this.copyToClipboard();
+                    }
+                });
+            }
+
+            generateGamertag() {
+                const category = this.categorySelect.value;
+                const mode = this.modeSelect.value;
+
+                let gamertag;
+
+                switch(mode) {
+                    case 'hybrid':
+                        gamertag = this.generateHybrid(category);
+                        break;
+                    case 'prefix':
+                        gamertag = this.generatePrefixOnly(category);
+                        break;
+                    case 'suffix':
+                        gamertag = this.generateSuffixOnly(category);
+                        break;
+                    case 'random':
+                        gamertag = this.generatePureRandom();
+                        break;
+                    default:
+                        gamertag = this.generateHybrid(category);
+                }
+
+                gamertag = this.truncateToMaxLength(gamertag);
+                this.displayGamertag(gamertag);
+                this.addToHistory(gamertag);
+            }
+
+            generateHybrid(category) {
+                const data = gamertagData[category];
+                const prefix = this.getRandomItem(data.prefixes);
+                const suffix = this.getRandomItem(data.suffixes);
+
+                const cleanPrefix = this.cleanText(prefix);
+                const cleanSuffix = this.cleanText(suffix);
+
+                return cleanPrefix + cleanSuffix;
+            }
+
+            generatePrefixOnly(category) {
+                const data = gamertagData[category];
+                const prefix = this.getRandomItem(data.prefixes);
+                const cleanPrefix = this.cleanText(prefix);
+
+                if (Math.random() > 0.5) {
+                    const randomNum = Math.floor(Math.random() * 100);
+                    return cleanPrefix + randomNum;
+                }
+
+                return cleanPrefix;
+            }
+
+            generateSuffixOnly(category) {
+                const data = gamertagData[category];
+                const suffix = this.getRandomItem(data.suffixes);
+                const cleanSuffix = this.cleanText(suffix);
+
+                if (Math.random() > 0.5) {
+                    const randomNum = Math.floor(Math.random() * 100);
+                    return randomNum + cleanSuffix;
+                }
+
+                return cleanSuffix;
+            }
+
+            generatePureRandom() {
+                const length = Math.floor(Math.random() * 8) + 5;
+                let result = '';
+
+                if (Math.random() > 0.7) {
+                    result += 'xX';
+                }
+
+                for (let i = 0; i < length - result.length; i++) {
+                    const charType = Math.random();
+                    if (charType < 0.4) {
+                        result += this.getRandomChar(randomChars.uppercase);
+                    } else if (charType < 0.8) {
+                        result += this.getRandomChar(randomChars.lowercase);
+                    } else {
+                        result += this.getRandomChar(randomChars.numbers);
+                    }
+                }
+
+                if (Math.random() > 0.7) {
+                    result += 'Xx';
+                }
+
+                return this.truncateToMaxLength(result);
+            }
+
+            getRandomItem(array) {
+                return array[Math.floor(Math.random() * array.length)];
+            }
+
+            getRandomChar(charString) {
+                return charString[Math.floor(Math.random() * charString.length)];
+            }
+
+            cleanText(text) {
+                return text
+                    .replace(/^xX/i, '')
+                    .replace(/Xx$/i, '')
+                    .replace(/^ii/i, '')
+                    .replace(/ii$/i, '')
+                    .replace(/^zZ/i, '')
+                    .replace(/Zz$/i, '')
+                    .replace(/\d+$/g, '')
+                    .trim();
+            }
+
+            truncateToMaxLength(text) {
+                if (text.length <= this.maxNameLength) {
+                    return text;
+                }
+
+                const midPoint = Math.floor(this.maxNameLength / 2);
+                return text.substring(0, midPoint) + text.substring(text.length - (this.maxNameLength - midPoint));
+            }
+
+            displayGamertag(gamertag) {
+                this.currentGamertag = gamertag;
+
+                this.gamertagDisplay.innerHTML = `
+                    <span class="generated-text">${this.escapeHtml(gamertag)}</span>
+                `;
+
+                this.currentLengthSpan.textContent = gamertag.length;
+                this.copyBtn.disabled = false;
+                this.updateCharacterCountStyling(gamertag.length);
+            }
+
+            updateCharacterCountStyling(length) {
+                const charCount = document.querySelector('.character-count');
+
+                if (length >= this.maxNameLength) {
+                    charCount.classList.add('warning');
+                } else {
+                    charCount.classList.remove('warning');
+                }
+            }
+
+            addToHistory(gamertag) {
+                const existingIndex = this.history.indexOf(gamertag);
+                if (existingIndex !== -1) {
+                    this.history.splice(existingIndex, 1);
+                }
+
+                this.history.unshift(gamertag);
+
+                if (this.history.length > this.maxHistorySize) {
+                    this.history.pop();
+                }
+
+                this.updateHistoryDisplay();
+            }
+
+            updateHistoryDisplay() {
+                this.historyContainer.innerHTML = '';
+
+                this.history.forEach(gamertag => {
+                    const historyItem = document.createElement('div');
+                    historyItem.className = 'history-item';
+                    historyItem.textContent = gamertag;
+                    historyItem.addEventListener('click', () => {
+                        this.displayGamertag(gamertag);
+                    });
+                    this.historyContainer.appendChild(historyItem);
+                });
+            }
+
+            async copyToClipboard() {
+                if (!this.currentGamertag) return;
+
+                try {
+                    await navigator.clipboard.writeText(this.currentGamertag);
+                    this.showCopyFeedback();
+                } catch (err) {
+                    this.fallbackCopyToClipboard();
+                }
+            }
+
+            fallbackCopyToClipboard() {
+                const textArea = document.createElement('textarea');
+                textArea.value = this.currentGamertag;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+
+                try {
+                    document.execCommand('copy');
+                    this.showCopyFeedback();
+                } catch (err) {
+                    console.error('Copy failed:', err);
+                }
+
+                document.body.removeChild(textArea);
+            }
+
+            showCopyFeedback() {
+                this.copyFeedback.classList.remove('hide');
+                this.copyFeedback.classList.add('show');
+
+                setTimeout(() => {
+                    this.copyFeedback.classList.remove('show');
+                    this.copyFeedback.classList.add('hide');
+                }, 2000);
+            }
+
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            new GamertagGenerator();
+        });
+    </script>
+</body>
+</html>
